@@ -1,10 +1,9 @@
 import ProductModel from "../../models/Product.model.js";
 import { Router, Request, Response } from "express";
-import { getTotalAmount } from "./helpers/totalAmount.js";
 
 const router = Router();
 
-router.post("/:id", async (req: Request, res: Response) => {
+router.delete("/:id", async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
 
@@ -18,7 +17,7 @@ router.post("/:id", async (req: Request, res: Response) => {
     res.json({ message: `Product deleted successfully` });
     return;
   } catch (error) {
-    res.send({ error: "Error deleting project" });
+    res.send({ error: "Error deleting product" });
   }
 });
 
