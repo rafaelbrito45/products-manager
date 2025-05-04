@@ -14,6 +14,6 @@ router.use("/", findAllProductsRoute); // GET /products
 router.use("/", createProductRoute); // POST /products
 router.use("/search", findProductByQueryRoute); //GET /search/q=''
 router.use("/", findProductById); //GET /:id
-router.use("/:id", deleteProductById); //POST /:id
+router.use("/", deleteProductById); //POST /:id
 
 export default router;

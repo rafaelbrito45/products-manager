@@ -15,7 +15,7 @@ router.get("/", async (req: Request, res: Response) => {
       name: { $regex: `^${searchQuery}`, $options: "i" },
     });
 
-    res.json(clients);
+    res.json({ clients });
   } catch (error) {
     res.send({ status: "Could not retrieve clients" });
   }

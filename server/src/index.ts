@@ -5,10 +5,16 @@ import statusRoutes from "./routes/status.routes.js";
 import productsRoutes from "./routes/products/index.js";
 import ordersRoutes from "./routes/orders/index.js";
 import clientsRoutes from "./routes/clients/index.js";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 const PORT = process.env.PORT || 5000;
 const MONGO_URI =
   process.env.MONGO_URI ||
