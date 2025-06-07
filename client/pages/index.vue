@@ -30,6 +30,7 @@
             <th class="text-left text-slate-500 text-sm md:text-base">Name</th>
             <th class="text-left text-slate-500 text-sm md:text-base">Price</th>
             <th class="text-left text-slate-500 text-sm md:text-base">Store</th>
+            <th class="text-left text-slate-500 text-sm md:text-base">Sold</th>
             <th class="text-left text-slate-500 text-sm md:text-base">
               Details
             </th>
@@ -51,6 +52,10 @@
             </td>
             <td class="border-y border-gray-300 text-xs md:text-base">
               {{ product.store_name }}
+            </td>
+
+            <td class="border-y border-gray-300 text-xs md:text-base">
+              {{ product.totalAmount }}
             </td>
 
             <td class="border-y border-gray-300 text-xs md:text-base">
